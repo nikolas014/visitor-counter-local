@@ -1,4 +1,4 @@
-const contador = document.getElementById("contador")
+const counter = document.getElementById("contador")
 
 function counts(){
     let cuenta = localStorage.getItem("COUNT_V1")
@@ -12,16 +12,22 @@ function counts(){
     }
 };
 
-const resultado = counts();
+const result = counts();
 
-contador.innerHTML = `
-    <h1>Contador de Visitas local</h1>
-    <div class="visitantes">     
-        <p class="numero">${resultado}</p>
-        <p class="texto">Visitas</p>
-    </div>
-`
+function drawCounter(num) {
+   counter.innerHTML = `
+        <h1>Contador de Visitas local</h1>
+        <div class="visitantes">     
+            <p class="numero">${num}</p>
+            <p class="texto">Visitas</p>
+        </div>
+    ` 
+    return draw;
+}
+
+drawCounter(result);
 
 function resetCount(){
-    localStorage.setItem("COUNT_V1", "0")
+    localStorage.setItem("COUNT_V1", "1")
+    drawCounter(1);
 }
