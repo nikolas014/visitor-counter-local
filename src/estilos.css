@@ -13,12 +13,6 @@ body {
 	font-family: "Oswald";
 }
 
-.contador{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-}
-
 /* contador */
 .visitantes {
 	background: #BB1F35;
@@ -52,7 +46,7 @@ h1 {
 .btn{
 	background-color: #cc2F47;
 	color: #FFF;
-	display: flex;
+	display: block;
 	margin: auto;
 	padding: 15px;
 	border-radius: 5px;
